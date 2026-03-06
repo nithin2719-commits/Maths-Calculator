@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-grad-1: #071025;
+  --bg-grad-2: #07182a;
+}
+
+html, body, #root { height: 100%; }
+body {
+  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-gray-100 antialiased;
+}
+
+/* Glass card */
+.card-glass {
+  background: rgba(13, 23, 38, 0.6);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Soft focus glow */
+:focus {
+  outline: none;
+  box-shadow: 0 6px 30px rgba(59,130,246,0.12);
+}
+
+/* Particles (simple) */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(99,102,241,0.08) 0px, transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(59,130,246,0.06) 0px, transparent 30%),
+    radial-gradient(circle at 50% 90%, rgba(96,165,250,0.04) 0px, transparent 35%);
+}
+
+/* subtle animations */
+.fade-in { animation: fadeIn 360ms ease both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: none;} }
+
+/* Utility: big rounded cards */
+.card-2xl { border-radius: 1rem; }
