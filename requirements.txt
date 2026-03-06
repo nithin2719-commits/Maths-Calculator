@@ -1,21 +1,21 @@
 # This is a Node.js (Vite + React) project — package.json is primary.
 # The lines below are a plain reference of the project's dependencies.
 
-framer-motion@^12.34.5
-jspdf@^4.2.0
-mathjs@^15.1.1
-react@^19.2.4
-react-dom@^19.2.4
-recharts@^3.7.0
-zustand@^5.0.11
+framer-motion@12.34.5
+jspdf@4.2.0
+mathjs@15.1.1
+react@19.2.4
+react-dom@19.2.4
+recharts@3.7.0
+zustand@5.0.11
 
 # Dev dependencies:
-@tailwindcss/postcss@^4.2.1
-@vitejs/plugin-react@^5.1.4
-autoprefixer@^10.4.27
-postcss@^8.5.8
-tailwindcss@^4.2.1
-vite@^7.3.1
+@tailwindcss/postcss@4.2.1
+@vitejs/plugin-react@5.1.4
+autoprefixer@10.4.27
+postcss@8.5.8
+tailwindcss@4.2.1
+vite@7.3.1
 
 # Note: To actually install these, use npm/pnpm/yarn as shown below.
 
