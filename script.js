@@ -1333,19 +1333,16 @@ function evalDerivatives(equationType, x0, y0, order) {
   let f, fx, fy, fxx, fxy, fyy, fxxx, fxxy, fxyy, fyyy;
   switch (equationType) {
     case 'x_plus_y': {
-      // y' = x + y -> y'' = 1 + y' = 1 + x + y
-      // y''' = 0 + y'' = 1 + x + y = same pattern
-      // y^(n) = y^(n-1) + 1 (but also adds the x term derivative)
       // y' = x + y
       // y'' = 1 + y' = 1 + x + y
-      // y''' = 1 + y'' = 1 + (1 + x + y) = 2 + x + y
-      // y'''' = 1 + y''' = 3 + x + y
+      // y''' = y''    (the constant 1 differentiates to 0)
+      // y'''' = y'''
       const base = x0 + y0;
       const derivs = [y0]; // y at x0
       const yp1 = base;         // y' = x + y
       const yp2 = 1 + yp1;      // y'' = 1 + y'
-      const yp3 = 1 + yp2;      // y''' = 1 + y''
-      const yp4 = 1 + yp3;      // y'''' = 1 + y'''
+      const yp3 = yp2;          // y''' = y''
+      const yp4 = yp3;          // y'''' = y'''
       return [yp1, yp2, yp3, yp4];
     }
     case 'x2_plus_y': {

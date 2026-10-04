@@ -52,8 +52,8 @@ async function evalTaylorDerivatives(equationExpr, x0, y0, order) {
         case 'x_plus_y': {
           const yp1 = x0 + y0;
           const yp2 = 1 + yp1;
-          const yp3 = 1 + yp2;
-          const yp4 = 1 + yp3;
+          const yp3 = yp2;
+          const yp4 = yp3;
           return [y0, yp1, yp2, yp3, yp4].slice(0, maxOrder + 1);
         }
         case 'x2_plus_y': {
